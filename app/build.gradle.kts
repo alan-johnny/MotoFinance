@@ -79,6 +79,10 @@ dependencies {
     kapt(libs.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
 
+    //koin
+    implementation(libs.koin.android)
+    implementation(libs.koin.androidx.compose)
+
 
     // Kotlin
     implementation(libs.kotlinx.coroutines.android)
