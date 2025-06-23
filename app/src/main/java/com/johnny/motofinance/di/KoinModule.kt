@@ -4,6 +4,7 @@ import androidx.room.Room
 import com.johnny.motofinance.data.local.db.AppDataBase
 import com.johnny.motofinance.data.repository.AbastecimentoRepositoryImpl
 import com.johnny.motofinance.data.repository.KmRodadoRepositoryImpl
+import com.johnny.motofinance.data.repository.MotoRepositoryImpl
 import com.johnny.motofinance.data.repository.PecaRepositoryImpl
 import com.johnny.motofinance.data.repository.RendimentoRepositoryImpl
 import org.koin.android.ext.koin.androidApplication
@@ -30,6 +31,7 @@ val repositoryModule = module {
     single { KmRodadoRepositoryImpl(get()) }
     single { PecaRepositoryImpl(get()) }
     single { RendimentoRepositoryImpl(get()) }
+    single { MotoRepositoryImpl(get()) }
 }
 
 val appModules = listOf(databaseModule, repositoryModule)

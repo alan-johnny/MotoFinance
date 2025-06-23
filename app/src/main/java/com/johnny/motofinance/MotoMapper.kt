@@ -3,7 +3,7 @@ package com.johnny.motofinance
 import com.johnny.motofinance.data.local.entity.MotoEntity
 import com.johnny.motofinance.domain.model.Moto
 
-fun MotoEntity.toMoto(): Moto = Moto(
+fun MotoEntity.toMotoModel(): Moto = Moto(
 
      id,
      modelo,
