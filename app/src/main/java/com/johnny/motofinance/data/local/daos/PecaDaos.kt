@@ -5,6 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Update
 import com.johnny.motofinance.data.local.entity.PecaEntity
 import kotlinx.coroutines.flow.Flow
 
@@ -17,6 +18,9 @@ interface PecaDaos {
 
     @Delete
     suspend fun delete(peca: PecaEntity)
+
+    @Update
+    suspend fun update(peca: PecaEntity)
 
     @Query("SELECT * FROM pecas")
     fun getAllPecas(): Flow<List<PecaEntity>>

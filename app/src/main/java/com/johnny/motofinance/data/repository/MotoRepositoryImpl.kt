@@ -20,7 +20,7 @@ class MotoRepositoryImpl(private val daos: MotoDaos) : MotoRepository{
     }
 
     override suspend fun update(moto: Moto) {
-        TODO("Not yet implemented")
+        daos.update(moto.toEntity())
     }
 
     override suspend fun delete(moto: Moto) {
